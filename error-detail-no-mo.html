@@ -474,197 +474,84 @@
               <li class="breadcrumb-item">
                 <a href="javascript:void(0)">Alert</a>
               </li>
-              <li class="breadcrumb-item active">
+              <li class="breadcrumb-item">
                 <a href="javascript:void(0)">Alert Dashboard</a>
+              </li>
+              <li class="breadcrumb-item active">
+                <a href="javascript:void(0)">Error Detail No MO</a>
               </li>
             </ol>
           </div>
           <!-- end breadcrumb -->
           <div class="row">
             <div class="col-xl-12 col-lg-12 col-sm-12">
-              <div class="card">
-                <div class="basic-form container">
-                  <form>
-                    <div class="row">
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Country</label>
-                        <select class="default-select form-control">
-                          <option value="All Country" selected>
-                            All Country
-                          </option>
-                          <option value="Indonesia">Indonesia</option>
-                          <option value="Pakistan">Pakistan</option>
-                          <option value="Vietnam">Vietnam</option>
-                        </select>
-                      </div>
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Operator</label>
-                        <select class="default-select form-control">
-                          <option value="All Operator" selected>
-                            All Operator
-                          </option>
-                          <option value="Telkomsel">Telkomsel</option>
-                          <option value="Indosat">Indosat</option>
-                          <option value="XL">XL</option>
-                        </select>
-                      </div>
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Campaign Name</label>
-                        <select class="default-select form-control">
-                          <option value="All Campaign Name" selected>
-                            All Campai...
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                      </div>
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Service</label>
-                        <select class="default-select form-control">
-                          <option value="All Service" selected>
-                            All Service
-                          </option>
-                          <option value="Gemezz">Gemezz</option>
-                          <option value="Gamester">Gamester</option>
-                          <option value="Mame">Mame</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Status</label>
-                        <select class="default-select form-control">
-                          <option value="All Status" selected>
-                            All Status
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                      </div>
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Date Range</label>
-                        <select class="default-select form-control">
-                          <option value="All Date Range" selected>
-                            All Date Range
-                          </option>
-                          <option value="Today">Today</option>
-                          <option value="Yesterday">Yesterday</option>
-                          <option value="Last 7 Days">Last 7 Days</option>
-                          <option value="Last 30 Days">Last 30 Days</option>
-                          <option value="This Month">This Month</option>
-                          <option value="Last Month">Last Month</option>
-                          <option value="Costum Range">Costum Range</option>
-                        </select>
-                      </div>
-                      <div
-                        class="mb-3 col-md-3 d-flex gap-2 align-items-center w-full"
-                      >
-                        <label class="form-label">Select Date</label>
-                        <input
-                          type="text"
-                          class="form-control input-daterange-timepicker"
-                          name="daterange"
-                          value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM"
-                        />
-                      </div>
-                      <div class="mb-3 col-md-3 col-sm-10">
-                        <button type="submit" class="btn btn-primary">
-                          Submit
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="title-detail-section">
+                  <h1 class="fs-40 text-black font-w600">No MO for 1 Hour</h1>
+                  <div class="subtitle-detail">
+                    Last 30 Days Alert Report [No MO for 1 Hour] [ID - PASS -
+                    TSEL] DIGMAGZ
+                  </div>
                 </div>
-                <div class="card-header">
-                  <h4 class="card-title">All Error</h4>
-                </div>
-                <div class="card-body">
-                  <canvas id="chartAlert"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-12 col-lg-12 col-sm-12">
-              <div class="d-flex justify-content-between align-items-center">
-                <h2 class="fs-40 text-black font-w600">Last 30 Days Summary</h2>
-                <div class="mb-3 d-flex gap-2 align-items-center">
-                  <label class="form-label" style="width: fit-content"
-                    >Select Date</label
+                <div class="title-detail-section align-items-end gap-2">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm d-flex gap-1 justify-content-center align-items-center"
+                    style="width: fit-content"
                   >
-                  <input
-                    type="text"
-                    class="form-control input-daterange-timepicker"
-                    name="daterange"
-                    value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM"
-                  />
+                    <i
+                      class="ph ph-microsoft-excel-logo"
+                      style="font-size: 20px"
+                    ></i>
+                    Export as PDF
+                  </button>
+                  <div class="mb-3 d-flex gap-2 align-items-center">
+                    <label class="form-label" style="width: fit-content"
+                      >Select Date</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control input-daterange-timepicker"
+                      name="daterange"
+                      value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM"
+                    />
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col col-md-3">
-                  <div class="card-case card-total-solved-case">
-                    <img
-                      src="images/icon-total-solved-case.svg"
-                      alt="icon-total-solved-case"
-                    />
-                    <div class="content-case">
-                      <div class="title-card-data-case">Total Solved Case</div>
-                      <h3 class="desc-card-data-case">50</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col col-md-3">
-                  <div class="card-case card-total-unsolved-case">
-                    <img
-                      src="images/icon-unsolved-case.svg"
-                      alt="icon-total-solved-case"
-                    />
-                    <div class="content-case">
-                      <div class="title-card-data-case">
-                        Total Unsolved Case
-                      </div>
-                      <h3 class="desc-card-data-case">13</h3>
-                    </div>
-                  </div>
+                <div class="col col-md-6">
+                  <canvas id="chartDetailAlert"></canvas>
                 </div>
                 <div class="col col-md-6">
-                  <div class="card-error-today">
-                    <h3 class="title-error-today">Total Error Day</h3>
-                    <div class="row w-100">
-                      <div class="col">
-                        <div class="content-error-today">
-                          <div class="title-no-mo">No <br />Mo</div>
-                          <h3 class="value-error-today">25</h3>
+                  <div class="card" style="height: fit-content">
+                    <div class="card-body">
+                      <h3>Last 30 Days Summary</h3>
+                      <div class="mb-1">No MO for 1 Hour</div>
+                      <div class="mb-3">1 August - 30 August 2024</div>
+                      <div class="card-case-content">
+                        <div class="card-case card-total-solved-case">
+                          <img
+                            src="images/icon-total-solved-case.svg"
+                            alt="icon-total-solved-case"
+                          />
+                          <div class="content-case">
+                            <div class="title-card-data-case">
+                              Total Solved Case
+                            </div>
+                            <h3 class="desc-card-data-case">50</h3>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col">
-                        <div class="content-error-today">
-                          <div class="title-cr-drop">CR <br />Drop</div>
-                          <h3 class="value-error-today">25</h3>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content-error-today">
-                          <div class="title-cap-reached">Cap Reached</div>
-                          <h3 class="value-error-today">25</h3>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content-error-today">
-                          <div class="title-ratio-alert">Ratio <br />Alert</div>
-                          <h3 class="value-error-today">25</h3>
+                        <div class="card-case card-total-unsolved-case">
+                          <img
+                            src="images/icon-unsolved-case.svg"
+                            alt="icon-total-solved-case"
+                          />
+                          <div class="content-case">
+                            <div class="title-card-data-case">
+                              Total Unsolved Case
+                            </div>
+                            <h3 class="desc-card-data-case">13</h3>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -674,60 +561,65 @@
             </div>
             <div class="col-xl-12 col-lg-12 col-sm-12">
               <div class="card mt-3">
-                <div class="card-header">
-                  <h4 class="card-title">Datatable Responsive</h4>
-                </div>
                 <div class="card-body">
-                  <table
-                    id="responsiveTable"
-                    class="display responsive nowrap"
-                    style="width: 100%"
-                  >
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Time</th>
-                        <th>Service</th>
-                        <th>Error</th>
-                        <th>Status</th>
-                        <th>Detail Error</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>17/07/2024 14:00</td>
-                        <td>[ID - PASS - TSEL] DIGMAGZ</td>
-                        <td>No MO</td>
-                        <td>
-                          <select class="status_select">
-                            <option value="solve" selected>Solve</option>
-                            <option value="unsolved">Unsolved</option>
-                          </select>
-                        </td>
-                        <td>
-                          <a
-                            href="error-detail-no-mo.html"
-                            class="text-primary text-decoration-underline fw-medium"
-                            >See Detail</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>17/07/2024 14:00</td>
-                        <td>[ID - KB - TSEL] PLAYZONE</td>
-                        <td>CR Drop</td>
-                        <td>
-                          <select class="status_select">
-                            <option value="solve">Solve</option>
-                            <option value="unsolved" selected>Unsolved</option>
-                          </select>
-                        </td>
-                        <td><a href="#" class="text-primary">See Detail</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table-responsive">
+                    <table id="example4" class="display">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Time</th>
+                          <th>Service</th>
+                          <th>Traffic</th>
+                          <th>MO</th>
+                          <th>MO 1 Hour Ago</th>
+                          <th>MO 4 Hours Ago</th>
+                          <th>Last 24 Hours Ago</th>
+                          <th>Yesterday MO</th>
+                          <th>Error Message</th>
+                          <th>Status</th>
+                          <th>PIC</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>17/07/2024 14:00</td>
+                          <td>[ID - PASS - TSEL] DIGMAGZ</td>
+                          <td>1000</td>
+                          <td>0</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>No MO for 1 hour, please check</td>
+                          <td>
+                            <span class="badge badge-success badge-lg"
+                              >Solved</span
+                            >
+                          </td>
+                          <td>Melinda</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>17/07/2024 14:00</td>
+                          <td>[ID - PASS - TSEL] DIGMAGZ</td>
+                          <td>1000</td>
+                          <td>0</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>50</td>
+                          <td>No MO for 1 hour, please check</td>
+                          <td>
+                            <span class="badge badge-danger badge-lg"
+                              >Unsolved</span
+                            >
+                          </td>
+                          <td>Melinda</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -812,87 +704,52 @@
     <script src="vendor/chart-js/chart.bundle.min.js"></script>
     <!-- <script src="js/plugins-init/chartjs-init.js"></script> -->
     <script>
-      const ctx = document.getElementById("chartAlert");
+      var chrt = document.getElementById("chartDetailAlert").getContext("2d");
 
-      new Chart(ctx, {
-        type: "bar",
+      var chartDetailAlert = new Chart(chrt, {
+        type: "pie",
         data: {
-          labels: [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-          ],
+          labels: ["Solved", "Not Solved"],
           datasets: [
             {
-              label: "CR Drop",
-              backgroundColor: "#FF9900",
-              data: [
-                3, 7, 4, 6, 5, 9, 3, 2, 7, 8, 5, 3, 4, 6, 7, 8, 5, 6, 3, 9, 4,
-                8, 2, 7, 6, 9, 3, 5, 6, 4,
-              ],
-            },
-            {
-              label: "Cap Reached",
-              backgroundColor: "#7860D8",
-              data: [
-                4, 3, 5, 7, 6, 8, 2, 5, 3, 6, 7, 8, 2, 4, 6, 7, 5, 4, 7, 6, 8,
-                3, 5, 6, 9, 2, 4, 6, 3, 5,
-              ],
-            },
-            {
-              label: "No MO for 1 hour",
-              backgroundColor: "#FE4949",
-              data: [
-                7, 2, 6, 9, 5, 6, 8, 4, 3, 7, 2, 5, 9, 6, 3, 8, 4, 6, 7, 3, 5,
-                8, 4, 6, 2, 7, 5, 3, 6, 4,
-              ],
-            },
-            {
-              label: "Ratio Alert",
-              backgroundColor: "#72C288",
-              data: [
-                7, 2, 6, 3, 5, 8, 4, 6, 2, 7, 5, 3, 6, 4, 8, 2, 6, 3, 5, 7, 9,
-                4, 6, 3, 5, 8, 7, 6, 5, 4,
-              ],
+              data: [66.67, 33.33],
+              backgroundColor: ["#3CC249", "red"],
+              hoverOffset: 5,
             },
           ],
         },
-
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
+        // options: {
+        //   responsive: false,
+        // },
       });
+
+      //   new Chart(ctx, {
+      //     type: "pie",
+      //     data: {
+      //       labels: ["Solved", "Unsolved"],
+      //       datasets: [
+      //         {
+      //           label: "Solved",
+      //           backgroundColor: "#3CC249",
+      //           data: 66.67,
+      //         },
+      //         {
+      //           label: "Unsolved",
+      //           backgroundColor: "#FF0000",
+      //           data: 33.33,
+      //         },
+      //       ],
+      //     },
+
+      //     options: {
+      //       responsive: true,
+      //       plugins: {
+      //         legend: {
+      //           position: "top",
+      //         },
+      //       },
+      //     },
+      //   });
     </script>
 
     <!-- Dashboard 1 -->

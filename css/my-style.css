@@ -2,6 +2,7 @@
 
 .card-case {
   display: flex;
+  width: 100%;
   height: 100%;
   padding: 20px;
   flex-direction: column;
@@ -38,6 +39,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  margin-top: 32px;
 }
 
 .card-case .content-case .desc-card-data-case {
@@ -110,6 +112,13 @@
   font-size: 44px;
   font-style: normal;
   font-weight: 600;
+}
+
+.card-case-content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
 }
 /**
 .status_error_report {
@@ -214,6 +223,11 @@
   border-radius: 8px;
   height: fit-content;
   width: fit-content;
+}
+
+.title-detail-section {
+  display: flex;
+  flex-direction: column;
 }
 /* .display.dataTable.no-footer {
   width: 100vh;
