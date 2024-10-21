@@ -213,6 +213,18 @@
   display: flex;
   flex-direction: column;
 }
+
+.tabulator-tree-level-1 {
+  background: #c7f9ed !important;
+}
+
+.tabulator-tree-level-2 {
+  background: #92f3e4 !important;
+}
+
+.tabulator-tree-level-3 {
+  background: #58ddd2 !important;
+}
 /* .display.dataTable.no-footer {
   width: 100vh;
   overflow-x: hidden;

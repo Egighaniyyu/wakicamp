@@ -125,6 +125,14 @@
     />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap Select CSS (if necessary) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -700,10 +708,14 @@
                         <td>[ID - PASS - TSEL] DIGMAGZ</td>
                         <td>No MO</td>
                         <td>
-                          <select class="status_select solved-bg">
-                            <option value="solve" selected>Solve</option>
-                            <option value="unsolved">Unsolved</option>
-                          </select>
+                          <div
+                            class="dropdown bootstrap-select status_select solved-bg"
+                          >
+                            <select class="status_select" tabindex="null">
+                              <option value="solve" selected>Solve</option>
+                              <option value="unsolved">Unsolved</option>
+                            </select>
+                          </div>
                         </td>
                         <td>
                           <a
@@ -719,10 +731,16 @@
                         <td>[ID - KB - TSEL] PLAYZONE</td>
                         <td>CR Drop</td>
                         <td>
-                          <select class="status_select unsolved-bg">
-                            <option value="solve">Solve</option>
-                            <option value="unsolved" selected>Unsolved</option>
-                          </select>
+                          <div
+                            class="dropdown bootstrap-select status_select unsolved-bg"
+                          >
+                            <select class="status_select" tabindex="null">
+                              <option value="solve">Solve</option>
+                              <option value="unsolved" selected>
+                                Unsolved
+                              </option>
+                            </select>
+                          </div>
                         </td>
                         <td><a href="#" class="text-primary">See Detail</a></td>
                       </tr>
@@ -769,38 +787,53 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <!-- <script>
-      // Fungsi untuk mengatur background berdasarkan nilai select
-      function setSelectBackground(selectElement) {
-        const parentDiv = selectElement.closest(".bootstrap-select"); // Ambil parent div (.bootstrap-select)
 
-        // Hapus class solve-bg atau unsolved-bg dari parent div
-        parentDiv.classList.remove("solve-bg", "unsolved-bg");
+    <!-- Alert pergantian status di table -->
+    <script>
+      document
+        .querySelectorAll(".status_select")
+        .forEach(function (selectElement) {
+          // Mencari elemen <div> pembungkus dengan class 'bootstrap-select'
+          let wrapperDiv = selectElement.closest(".bootstrap-select");
 
-        // Tambahkan class sesuai dengan nilai yang dipilih
-        if (selectElement.value === "solve") {
-          parentDiv.classList.add("solve-bg");
-        } else if (selectElement.value === "unsolved") {
-          parentDiv.classList.add("unsolved-bg");
-        }
-      }
+          selectElement.addEventListener("change", function (event) {
+            if (event.target.value === "solve") {
+              Swal.fire({
+                title: "Are you sure?",
+                text: "Do you want to mark this as solved?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, solve it!",
+                cancelButtonText: "No, keep it unsolved",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  // Mengubah class unsolved-bg menjadi solved-bg setelah konfirmasi
+                  wrapperDiv.classList.remove("unsolved-bg");
+                  wrapperDiv.classList.add("solved-bg");
 
-      // Jalankan fungsi ketika halaman selesai load dan Bootstrap Select selesai diinisialisasi
-      window.addEventListener("load", function () {
-        // Pastikan Bootstrap Select sudah diinisialisasi
-        $(".status-select").each(function () {
-          const selectElement = this;
+                  Swal.fire(
+                    "Solved!",
+                    "The status has been updated to solved.",
+                    "success"
+                  );
+                } else {
+                  // Jika dibatalkan, tetap kembalikan nilai ke unsolved
+                  event.target.value = "unsolved";
 
-          // Set background awal berdasarkan nilai saat halaman diload
-          setSelectBackground(selectElement);
-
-          // Tambahkan event listener untuk mendeteksi perubahan nilai
-          selectElement.addEventListener("change", function () {
-            setSelectBackground(selectElement);
+                  // Pastikan class tetap unsolved-bg
+                  wrapperDiv.classList.remove("solved-bg");
+                  wrapperDiv.classList.add("unsolved-bg");
+                }
+              });
+            } else {
+              // Jika pengguna mengubah ke 'unsolved', pastikan class kembali ke unsolved-bg
+              wrapperDiv.classList.remove("solved-bg");
+              wrapperDiv.classList.add("unsolved-bg");
+            }
           });
         });
-      });
-    </script> -->
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
 
     <!-- Required vendors -->
     <script src="vendor/global/global.min.js"></script>
