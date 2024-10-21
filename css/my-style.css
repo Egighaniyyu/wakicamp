@@ -120,38 +120,22 @@
   gap: 24px;
   width: 100%;
 }
-/**
+
 .status_error_report {
   padding: 10px;
   font-size: 16px;
 }
 
-.bootstrap-select.unsolved-bg,
-.bootstrap-select.solve-bg {
-  border-radius: 100px;
-  border: none !important;
-}
-
-.bootstrap-select.unsolved-bg .btn,
-.bootstrap-select.solve-bg .btn {
-  color: #fff !important;
-}
-
-.solve-bg {
-  background-color: #3cc249 !important;
-  color: white !important;
-}
-
-.unsolved-bg {
+.unsolved-bg .btn.dropdown-toggle.btn-light {
   background-color: #ff0000 !important;
   color: white !important;
+  border-radius: 99px;
 }
-**/
 
-.dataTables_paginate.paging_simple_numbers {
-  display: block !important;
-  position: fixed;
-  right: 0;
+.solved-bg .btn.dropdown-toggle.btn-light {
+  background-color: #3cc249 !important;
+  color: white !important;
+  border-radius: 99px;
 }
 
 .table-responsive {
